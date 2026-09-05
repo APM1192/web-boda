@@ -4,366 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana & Carlos | Nuestra Boda</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #FAF8F5; /* Fondo elegante crema suave */
-            color: #2C2C2C;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow-x: hidden;
-        }
-
-        .hero {
-            width: 100%;
-            max-width: 1200px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            padding: 2rem;
-            position: relative;
+            background-color: #fdfbf7;
+            color: #4a4a4a;
+            padding: 50px 20px;
         }
-
-        /* Marco decorativo sutil */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-            border: 1px solid #D9D2C9;
-            pointer-events: none;
-        }
-
-        .subtitle {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: #8C7A6B;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 7vw, 6rem);
-            font-weight: 400;
-            color: #1F1F1F;
-            margin-bottom: 1rem;
-            line-height: 1.1;
-        }
-
-        h1 span {
-            font-style: italic;
-            color: #A3865E; /* Acento dorado suave */
-            font-weight: 400;
-            margin: 0 0.2rem;
-        }
-
-        .date {
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            color: #555555;
-            margin-bottom: 3rem;
-            font-weight: 300;
-        }
-
-        /* Contador */
-        .countdown {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 75px;
-        }
-
-        .countdown-item span:first-child {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: #1F1F1F;
-            font-weight: 600;
-        }
-
-        .countdown-item .label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #8C7A6B;
-            margin-top: 0.3rem;
-        }
-
-        /* Separadores sutiles entre números en pantallas grandes */
-        .countdown-item:not(:last-child)::after {
-            content: '';
-            position: relative;
-        }
-
-        /* Adaptación móvil */
-        @media (max-width: 600px) {
-            .hero::before {
-                top: 10px;
-                left: 10px;
-                right: 10px;
-                bottom: 10px;
-            }
-            .countdown {
-                gap: 1.2rem;
-            }
-            .countdown-item span:first-child {
-                font-size: 1.8rem;
-            }
-        }
+        h1 { color: #8c7853; font-size: 3rem; margin-bottom: 5px; }
+        .fecha { font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 30px; }
+        .contador { display: flex; justify-content: center; gap: 15px; font-size: 1.2rem; }
+        .bloque { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); min-width: 80px; }
+        .numero { font-size: 2rem; font-weight: bold; color: #8c7853; display: block; }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <span class="subtitle">Nos casamos</span>
-        <h1>Ana <span>&</span> Carlos</h1>
-        <p class="date">30 . 04 . 2027</p>
+    <p>Nos casamos</p>
+    <h1>Ana & Carlos</h1>
+    <div class="fecha">30 . 04 . 2027</div>
 
-        <div class="countdown" id="countdown">
-            <div class="countdown-item">
-                <span id="days">00</span>
-                <span class="label">Días</span>
-            </div>
-            <div class="countdown-item">
-                <span id="hours">00</span>
-                <span class="label">Horas</span>
-            </div>
-            <div class="countdown-item">
-                <span id="minutes">00</span>
-                <span class="label">Minutos</span>
-            </div>
-            <div class="countdown-item">
-                <span id="seconds">00</span>
-                <span class="label">Segundos</span>
-            </div>
-        </div>
-    </section>
+    <div class="contador">
+        <div class="bloque"><span class="numero" id="dias">00</span>Días</div>
+        <div class="bloque"><span class="numero" id="horas">00</span>Horas</div>
+        <div class="bloque"><span class="numero" id="minutos">00</span>Minutos</div>
+        <div class="bloque"><span class="numero" id="segundos">00</span>Segundos</div>
+    </div>
 
     <script>
-        // Fecha objetivo: 30 de abril de 2027 a las 00:00:00
-        const weddingDate = new Date('April 30, 2027 00:00:00').getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = weddingDate - now;
-
-            if (distance < 0) {
-                document.getElementById('countdown').innerHTML = "<p style='font-family: Playfair Display; font-size: 1.5rem; color: #A3865E;'>¡Ha llegado el gran día!</p>";
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (Aquí tienes el código completo en un único archivo `index.html`. Incluye un diseño sofisticado con tipografías de Google Fonts (*Playfair Display* y *Montserrat*), un fondo elegante con una capa oscura semitransparente sobre una imagen de alta calidad, y una cuenta atrás interactiva en JavaScript en tiempo real.
-
-Puedes copiar este código, guardarlo en un archivo llamado `index.html` y abrirlo directamente en cualquier navegador web:
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana & Carlos - Nuestra Boda</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
-    <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
-    <link href="[https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap](https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap)" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body, html {
-            height: 100%;
-            font-family: 'Montserrat', sans-serif;
-            color: #ffffff;
-            background-color: #0b0f19;
-        }
-
-        .hero {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            /* Fondo elegante con un gradiente oscuro para mejorar la legibilidad sobre la imagen */
-            background: linear-gradient(rgba(11, 15, 25, 0.65), rgba(11, 15, 25, 0.75)), url('[https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80](https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80)') no-repeat center center/cover;
-            padding: 0 20px;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            z-index: 2;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            font-weight: 300;
-            color: #e5d4c0; /* Tono champán / dorado sutil */
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 7vw, 6rem);
-            font-weight: 400;
-            margin-bottom: 15px;
-            letter-spacing: 2px;
-        }
-
-        .date {
-            font-size: 1.25rem;
-            letter-spacing: 3px;
-            margin-bottom: 45px;
-            font-weight: 300;
-            color: #f3f4f6;
-        }
-
-        .countdown {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .countdown-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 8px;
-            padding: 15px 20px;
-            min-width: 85px;
-        }
-
-        .countdown-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: #e5d4c0;
-        }
-
-        .countdown-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 5px;
-            color: #d1d5db;
-        }
-
-        /* Responsive para móviles */
-        @media (max-width: 600px) {
-            .countdown {
-                gap: 10px;
-            }
-            .countdown-item {
-                padding: 10px 12px;
-                min-width: 65px;
-            }
-            .countdown-number {
-                font-size: 1.6rem;
-            }
-            .subtitle {
-                letter-spacing: 3px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <section class="hero">
-        <div class="hero-content">
-            <p class="subtitle">Nos Casamos</p>
-            <h1>Ana & Carlos</h1>
-            <p class="date">30 de Abril de 2027</p>
-
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-number" id="days">00</span>
-                    <span class="countdown-label">Días</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="hours">00</span>
-                    <span class="countdown-label">Horas</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">00</span>
-                    <span class="countdown-label">Minutos</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">00</span>
-                    <span class="countdown-label">Segundos</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        // Fecha objetivo: 30 de abril de 2027 a las 00:00:00
-        const targetDate = new Date("April 30, 2027 00:00:00").getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const difference = targetDate - now;
-
-            if (difference <= 0) {
-                document.getElementById("countdown").innerHTML = "<p style='font-family: Playfair Display; font-size: 1.8rem; color: #e5d4c0;'>¡Ha llegado el gran día!</p>";
-                return;
-            }
-
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-            // Actualizar los elementos en el DOM con formato de dos dígitos
-            document.getElementById("days").innerText = String(days).padStart(2, '0');
-            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-        }
-
-        // Ejecutar inmediatamente y luego cada segundo
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+        // Script básico para que la cuenta atrás funcione en tiempo real
+        const fechaBoda = new Date('April 30, 2027 12:00:00').getTime();
+        setInterval(function() {
+            const ahora = new Date().getTime();
+            const distancia = fechaBoda - ahora;
+            document.getElementById('dias').innerText = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            document.getElementById('horas').innerText = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById('minutos').innerText = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById('segundos').innerText = Math.floor((distancia % (1000 * 60)) / 1000);
+        }, 1000);
     </script>
 </body>
 </html>
