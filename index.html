@@ -17,10 +17,17 @@
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Karla:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Karla:wght@400;500;600&family=Parisienne&display=swap">
 <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
+
+<!-- Telón de fondo: dos fotos que se funden al bajar y acaban dando paso al color liso -->
+<div class="telon" id="telon" aria-hidden="true">
+  <div class="telon__capa telon__capa--a"></div>
+  <div class="telon__capa telon__capa--b"></div>
+  <div class="telon__velo"></div>
+</div>
 
 <a class="skip" href="#contenido">Saltar al contenido</a>
 
@@ -40,53 +47,24 @@
 
 <!-- ══════════ PORTADA ══════════ -->
 <section class="hero" id="inicio">
-  <div class="hero__card">
 
-    <svg class="sprig sprig--tl" viewBox="0 0 120 120" aria-hidden="true">
-      <g fill="none" stroke="#7C8B6A" stroke-width="1">
-        <path d="M8 8 C40 22 62 46 74 78"/>
-        <path d="M8 8 C34 12 54 24 68 42"/>
-      </g>
-      <g fill="#CFDCB2" stroke="#7C8B6A" stroke-width=".55">
-        <ellipse cx="28" cy="22" rx="10" ry="4.2" transform="rotate(28 28 22)"/>
-        <ellipse cx="44" cy="38" rx="10" ry="4.2" transform="rotate(38 44 38)"/>
-        <ellipse cx="57" cy="56" rx="9" ry="3.8" transform="rotate(48 57 56)"/>
-        <ellipse cx="67" cy="76" rx="8" ry="3.4" transform="rotate(62 67 76)"/>
-        <ellipse cx="34" cy="14" rx="8" ry="3.4" transform="rotate(8 34 14)"/>
-        <ellipse cx="52" cy="26" rx="8" ry="3.4" transform="rotate(20 52 26)"/>
-      </g>
-    </svg>
+  <div class="hero__txt">
+    <p class="hero__over">Save the date</p>
+    <h1 class="hero__names">Álvaro <span class="amp">&amp;</span> Rocío</h1>
+    <p class="hero__fecha">Viernes 30 de abril de 2027</p>
+    <p class="hero__sede">Finca Villa María · Las Rozas, Madrid</p>
 
-    <svg class="sprig sprig--br" viewBox="0 0 120 120" aria-hidden="true">
-      <g fill="none" stroke="#7C8B6A" stroke-width="1">
-        <path d="M8 8 C40 22 62 46 74 78"/>
-        <path d="M8 8 C34 12 54 24 68 42"/>
-      </g>
-      <g fill="#CFDCB2" stroke="#7C8B6A" stroke-width=".55">
-        <ellipse cx="28" cy="22" rx="10" ry="4.2" transform="rotate(28 28 22)"/>
-        <ellipse cx="44" cy="38" rx="10" ry="4.2" transform="rotate(38 44 38)"/>
-        <ellipse cx="57" cy="56" rx="9" ry="3.8" transform="rotate(48 57 56)"/>
-        <ellipse cx="67" cy="76" rx="8" ry="3.4" transform="rotate(62 67 76)"/>
-        <ellipse cx="34" cy="14" rx="8" ry="3.4" transform="rotate(8 34 14)"/>
-        <ellipse cx="52" cy="26" rx="8" ry="3.4" transform="rotate(20 52 26)"/>
-      </g>
-    </svg>
-
-    <p class="hero__over">Nos casamos</p>
-
-    <h1 class="hero__names">Álvaro<span class="amp">&amp;</span>Rocío</h1>
-
-    <p class="hero__rule" aria-hidden="true"><span></span></p>
-
-    <p class="hero__date">
-      <span class="hero__date-d">Viernes 30 de abril de 2027</span>
-      <span class="hero__date-p">Finca Villa María · Las Rozas, Madrid</span>
-    </p>
-
-    <p class="hero__count" id="cuenta" aria-live="polite">
-      <span class="hero__count-num" id="cuenta-dias">—</span>
-      <span class="hero__count-lbl" id="cuenta-txt">días por delante</span>
-    </p>
+    <div class="cd" id="cuenta">
+      <div class="cd__g">
+        <div class="cd__u"><span class="cd__n" id="cd-d">—</span><span class="cd__l">días</span></div>
+        <span class="cd__s" aria-hidden="true">:</span>
+        <div class="cd__u"><span class="cd__n" id="cd-h">—</span><span class="cd__l">horas</span></div>
+        <span class="cd__s" aria-hidden="true">:</span>
+        <div class="cd__u"><span class="cd__n" id="cd-m">—</span><span class="cd__l">min</span></div>
+        <span class="cd__s" aria-hidden="true">:</span>
+        <div class="cd__u"><span class="cd__n" id="cd-s">—</span><span class="cd__l">seg</span></div>
+      </div>
+    </div>
 
     <div class="hero__acts">
       <a class="btn btn--solid" href="#confirmar">Confirmar asistencia</a>
@@ -101,24 +79,24 @@
 </section>
 
 <!-- ══════════ HISTORIA ══════════ -->
-<section class="s s--tint" id="historia">
+<section class="s s--sobrefoto" id="historia">
   <div class="wrap sp">
     <div class="sp__t">
       <h2>Cómo hemos<br>llegado hasta aquí</h2>
-      <p class="sp__note">Un viernes de finales de abril, en Las Rozas.</p>
+      <p class="sp__note">De un rascacielos de Nueva York a un jardín de Las Rozas.</p>
     </div>
     <div class="sp__b">
       <div class="prose">
         <p><!-- TODO: escribid aquí vuestra historia. Dos o tres párrafos, en vuestro tono. -->
-        Aquí va vuestra historia. Dos o tres párrafos bastan: cómo os conocisteis, algún momento que
-        os defina y por qué habéis elegido esta fecha. Escribidlo como habláis, sin solemnidad.</p>
+        Aquí va vuestra historia. Dos o tres párrafos bastan: cómo os conocisteis, cómo fue la pedida
+        en Nueva York y por qué habéis elegido esta fecha. Escribidlo como habláis, sin solemnidad.</p>
         <p>Después de mucho hablarlo, nos casamos un viernes. Sabemos que pedir el día no siempre es
         fácil, y precisamente por eso nos hace especial ilusión que estéis.</p>
       </div>
       <div class="gal">
-        <figure class="gal__it"><img src="assets/img/pareja-1.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
-        <figure class="gal__it"><img src="assets/img/pareja-2.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
-        <figure class="gal__it"><img src="assets/img/pareja-3.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
+        <figure class="gal__it"><img src="assets/img/pareja-1.jpg" alt="Álvaro y Rocío en Central Park" loading="lazy" width="700" height="875"></figure>
+        <figure class="gal__it"><img src="assets/img/pareja-2.jpg" alt="Álvaro y Rocío" loading="lazy" width="700" height="875"></figure>
+        <figure class="gal__it"><img src="assets/img/pareja-3.jpg" alt="Álvaro y Rocío en Nueva York" loading="lazy" width="700" height="875"></figure>
       </div>
     </div>
   </div>
@@ -166,7 +144,8 @@
           <span class="tl__h">23:00</span>
           <div class="tl__b">
             <h3>Fiesta en las antiguas cocheras</h3>
-            <p>La discoteca está en un edificio aparte, así que quien quiera seguir charlando tiene dónde.</p>
+            <p>La discoteca está en un edificio aparte, así que quien quiera seguir charlando tiene dónde.
+            Habrá fotomatón durante la noche.</p>
           </div>
         </li>
         <li class="tl__it">
@@ -314,7 +293,7 @@
         te dejamos aquí el número de cuenta.</p>
       </div>
       <div class="iban">
-        <!-- TODO: sustituir por vuestro IBAN real -->
+        <!-- TODO: sustituir por vuestro IBAN real, aquí y en data-copy -->
         <code id="iban-txt">ES00 0000 0000 0000 0000 0000</code>
         <button class="btn btn--solid" type="button" id="iban-btn" data-copy="ES00 0000 0000 0000 0000 0000">Copiar número de cuenta</button>
         <span class="iban__ok" id="iban-ok" role="status" hidden>Copiado</span>
@@ -395,7 +374,7 @@
       <details class="acc">
         <summary>¿Puedo hacer fotos?</summary>
         <div class="acc__b"><p>Todas las que quieras. Solo te pedimos que durante la ceremonia dejes el
-        pasillo libre al fotógrafo. Habrá fotomatón durante la fiesta.</p></div>
+        pasillo libre al fotógrafo. Y habrá fotomatón durante la fiesta, así que llévate tu tira.</p></div>
       </details>
     </div>
   </div>
@@ -406,8 +385,8 @@
   <div class="wrap wrap--narrow center">
     <h2>Después de la boda</h2>
     <div class="prose">
-      <p>Aquí colgaremos la galería de fotos cuando esté lista, y un sitio donde puedas subir las tuyas.
-      Vuelve a pasarte por aquí en unas semanas.</p>
+      <p>Aquí colgaremos la galería de fotos cuando esté lista, las tiras del fotomatón y un sitio
+      donde puedas subir las tuyas. Vuelve a pasarte por aquí en unas semanas.</p>
       <!-- TODO: al volver de la boda, sustituir por el enlace a la galería de Pedro Zamorano
            y un enlace de subida de fotos de invitados. -->
     </div>
