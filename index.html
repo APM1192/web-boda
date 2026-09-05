@@ -40,146 +40,186 @@
 
 <!-- ══════════ PORTADA ══════════ -->
 <section class="hero" id="inicio">
-  <div class="hero__frame">
+  <div class="hero__card">
+
+    <svg class="sprig sprig--tl" viewBox="0 0 120 120" aria-hidden="true">
+      <g fill="none" stroke="#7C8B6A" stroke-width="1">
+        <path d="M8 8 C40 22 62 46 74 78"/>
+        <path d="M8 8 C34 12 54 24 68 42"/>
+      </g>
+      <g fill="#CFDCB2" stroke="#7C8B6A" stroke-width=".55">
+        <ellipse cx="28" cy="22" rx="10" ry="4.2" transform="rotate(28 28 22)"/>
+        <ellipse cx="44" cy="38" rx="10" ry="4.2" transform="rotate(38 44 38)"/>
+        <ellipse cx="57" cy="56" rx="9" ry="3.8" transform="rotate(48 57 56)"/>
+        <ellipse cx="67" cy="76" rx="8" ry="3.4" transform="rotate(62 67 76)"/>
+        <ellipse cx="34" cy="14" rx="8" ry="3.4" transform="rotate(8 34 14)"/>
+        <ellipse cx="52" cy="26" rx="8" ry="3.4" transform="rotate(20 52 26)"/>
+      </g>
+    </svg>
+
+    <svg class="sprig sprig--br" viewBox="0 0 120 120" aria-hidden="true">
+      <g fill="none" stroke="#7C8B6A" stroke-width="1">
+        <path d="M8 8 C40 22 62 46 74 78"/>
+        <path d="M8 8 C34 12 54 24 68 42"/>
+      </g>
+      <g fill="#CFDCB2" stroke="#7C8B6A" stroke-width=".55">
+        <ellipse cx="28" cy="22" rx="10" ry="4.2" transform="rotate(28 28 22)"/>
+        <ellipse cx="44" cy="38" rx="10" ry="4.2" transform="rotate(38 44 38)"/>
+        <ellipse cx="57" cy="56" rx="9" ry="3.8" transform="rotate(48 57 56)"/>
+        <ellipse cx="67" cy="76" rx="8" ry="3.4" transform="rotate(62 67 76)"/>
+        <ellipse cx="34" cy="14" rx="8" ry="3.4" transform="rotate(8 34 14)"/>
+        <ellipse cx="52" cy="26" rx="8" ry="3.4" transform="rotate(20 52 26)"/>
+      </g>
+    </svg>
+
     <p class="hero__over">Nos casamos</p>
+
     <h1 class="hero__names">Álvaro<span class="amp">&amp;</span>Rocío</h1>
+
+    <p class="hero__rule" aria-hidden="true"><span></span></p>
+
     <p class="hero__date">
-      <span>Viernes 30 de abril de 2027</span>
-      <span>Finca Villa María · Las Rozas, Madrid</span>
+      <span class="hero__date-d">Viernes 30 de abril de 2027</span>
+      <span class="hero__date-p">Finca Villa María · Las Rozas, Madrid</span>
     </p>
+
     <p class="hero__count" id="cuenta" aria-live="polite">
       <span class="hero__count-num" id="cuenta-dias">—</span>
       <span class="hero__count-lbl" id="cuenta-txt">días por delante</span>
     </p>
+
     <div class="hero__acts">
       <a class="btn btn--solid" href="#confirmar">Confirmar asistencia</a>
       <a class="btn btn--ghost" href="boda.ics" download>Guardar la fecha</a>
     </div>
   </div>
-  <div class="hero__leaf" aria-hidden="true">
-    <svg viewBox="0 0 220 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M110 25 C90 25 70 20 52 11" stroke="#7C8B6A" stroke-width="1"/>
-      <path d="M110 25 C130 25 150 20 168 11" stroke="#7C8B6A" stroke-width="1"/>
-      <g fill="#CFDCB2" stroke="#7C8B6A" stroke-width=".6">
-        <ellipse cx="94" cy="19" rx="9" ry="4" transform="rotate(-18 94 19)"/>
-        <ellipse cx="78" cy="14" rx="8" ry="3.6" transform="rotate(-24 78 14)"/>
-        <ellipse cx="62" cy="10" rx="7" ry="3.2" transform="rotate(-30 62 10)"/>
-        <ellipse cx="126" cy="19" rx="9" ry="4" transform="rotate(18 126 19)"/>
-        <ellipse cx="142" cy="14" rx="8" ry="3.6" transform="rotate(24 142 14)"/>
-        <ellipse cx="158" cy="10" rx="7" ry="3.2" transform="rotate(30 158 10)"/>
-      </g>
-    </svg>
-  </div>
+
+  <a class="scroll" href="#historia" aria-label="Bajar a la siguiente sección">
+    <span class="scroll__t">Sigue bajando</span>
+    <span class="scroll__l" aria-hidden="true"></span>
+  </a>
 </section>
 
 <!-- ══════════ HISTORIA ══════════ -->
 <section class="s s--tint" id="historia">
-  <div class="wrap wrap--narrow">
-    <h2>Cómo hemos llegado hasta aquí</h2>
-    <div class="prose">
-      <p><!-- TODO: escribid aquí vuestra historia. Dos o tres párrafos, en vuestro tono. -->
-      Aquí va vuestra historia. Dos o tres párrafos bastan: cómo os conocisteis, algún momento que os defina
-      y por qué habéis elegido esta fecha. Escribidlo como habláis, sin solemnidad.</p>
-      <p>Después de mucho hablarlo, nos casamos un viernes. Sabemos que pedir el día no siempre es fácil,
-      y precisamente por eso nos hace especial ilusión que estéis.</p>
+  <div class="wrap sp">
+    <div class="sp__t">
+      <h2>Cómo hemos<br>llegado hasta aquí</h2>
+      <p class="sp__note">Un viernes de finales de abril, en Las Rozas.</p>
     </div>
-    <div class="gal">
-      <figure class="gal__it"><img src="assets/img/pareja-1.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
-      <figure class="gal__it"><img src="assets/img/pareja-2.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
-      <figure class="gal__it"><img src="assets/img/pareja-3.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
+    <div class="sp__b">
+      <div class="prose">
+        <p><!-- TODO: escribid aquí vuestra historia. Dos o tres párrafos, en vuestro tono. -->
+        Aquí va vuestra historia. Dos o tres párrafos bastan: cómo os conocisteis, algún momento que
+        os defina y por qué habéis elegido esta fecha. Escribidlo como habláis, sin solemnidad.</p>
+        <p>Después de mucho hablarlo, nos casamos un viernes. Sabemos que pedir el día no siempre es
+        fácil, y precisamente por eso nos hace especial ilusión que estéis.</p>
+      </div>
+      <div class="gal">
+        <figure class="gal__it"><img src="assets/img/pareja-1.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
+        <figure class="gal__it"><img src="assets/img/pareja-2.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
+        <figure class="gal__it"><img src="assets/img/pareja-3.jpg" alt="Álvaro y Rocío" loading="lazy" width="800" height="1000"></figure>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ══════════ EL DÍA ══════════ -->
 <section class="s" id="eldia">
-  <div class="wrap">
-    <h2>El día, hora a hora</h2>
-    <p class="lead">Todo ocurre en la misma finca, así que no hay traslados entre la ceremonia y la fiesta.</p>
-
-    <ol class="tl">
-      <li class="tl__it">
-        <span class="tl__h">17:30</span><!-- TODO: confirmar horas con la finca -->
-        <div class="tl__b">
-          <h3>Llegada de invitados</h3>
-          <p>El aparcamiento está dentro de la finca. Entrad y seguid el camino gris hasta el fondo.</p>
-        </div>
-      </li>
-      <li class="tl__it">
-        <span class="tl__h">18:00</span>
-        <div class="tl__b">
-          <h3>Ceremonia civil en los jardines</h3>
-          <p>Al aire libre, entre los jardines del palacete. Si llueve, se traslada al interior.</p>
-        </div>
-      </li>
-      <li class="tl__it">
-        <span class="tl__h">18:45</span>
-        <div class="tl__b">
-          <h3>Cóctel en el pabellón acristalado</h3>
-          <p>Hora y media con vistas al jardín. Las fotos de grupo son aquí, así que no os escapéis lejos.</p>
-        </div>
-      </li>
-      <li class="tl__it">
-        <span class="tl__h">20:30</span>
-        <div class="tl__b">
-          <h3>Cena</h3>
-          <p>Encontraréis vuestra mesa en el seating a la entrada del salón.</p>
-        </div>
-      </li>
-      <li class="tl__it">
-        <span class="tl__h">23:00</span>
-        <div class="tl__b">
-          <h3>Fiesta en las antiguas cocheras</h3>
-          <p>La discoteca está en un edificio aparte, así que quien quiera seguir charlando tiene dónde.</p>
-        </div>
-      </li>
-      <li class="tl__it">
-        <span class="tl__h">01:00</span>
-        <div class="tl__b">
-          <h3>Recena</h3>
-          <p>Para aguantar el último tramo.</p>
-        </div>
-      </li>
-      <li class="tl__it tl__it--end">
-        <span class="tl__h">03:00</span>
-        <div class="tl__b">
-          <h3>Se acaba</h3>
-          <p>Cuatro horas de barra libre y hasta aquí. Organizad la vuelta con tiempo.</p>
-        </div>
-      </li>
-    </ol>
+  <div class="wrap sp">
+    <div class="sp__t">
+      <h2>El día,<br>hora a hora</h2>
+      <p class="sp__note">Todo ocurre en la misma finca, así que no hay traslados entre la ceremonia
+      y la fiesta.</p>
+    </div>
+    <div class="sp__b">
+      <ol class="tl">
+        <li class="tl__it">
+          <span class="tl__h">17:30</span><!-- TODO: confirmar horas con la finca -->
+          <div class="tl__b">
+            <h3>Llegada de invitados</h3>
+            <p>El aparcamiento está dentro de la finca. Entrad y seguid el camino gris hasta el fondo.</p>
+          </div>
+        </li>
+        <li class="tl__it">
+          <span class="tl__h">18:00</span>
+          <div class="tl__b">
+            <h3>Ceremonia civil en los jardines</h3>
+            <p>Al aire libre, entre los jardines del palacete. Si llueve, se traslada al interior.</p>
+          </div>
+        </li>
+        <li class="tl__it">
+          <span class="tl__h">18:45</span>
+          <div class="tl__b">
+            <h3>Cóctel en el pabellón acristalado</h3>
+            <p>Hora y media con vistas al jardín. Las fotos de grupo son aquí, así que no os escapéis lejos.</p>
+          </div>
+        </li>
+        <li class="tl__it">
+          <span class="tl__h">20:30</span>
+          <div class="tl__b">
+            <h3>Cena</h3>
+            <p>Encontraréis vuestra mesa en el seating a la entrada del salón.</p>
+          </div>
+        </li>
+        <li class="tl__it">
+          <span class="tl__h">23:00</span>
+          <div class="tl__b">
+            <h3>Fiesta en las antiguas cocheras</h3>
+            <p>La discoteca está en un edificio aparte, así que quien quiera seguir charlando tiene dónde.</p>
+          </div>
+        </li>
+        <li class="tl__it">
+          <span class="tl__h">01:00</span>
+          <div class="tl__b">
+            <h3>Recena</h3>
+            <p>Para aguantar el último tramo.</p>
+          </div>
+        </li>
+        <li class="tl__it tl__it--end">
+          <span class="tl__h">03:00</span>
+          <div class="tl__b">
+            <h3>Se acaba</h3>
+            <p>Cuatro horas de barra libre y hasta aquí. Organizad la vuelta con tiempo.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
   </div>
 </section>
 
 <!-- ══════════ CÓMO LLEGAR ══════════ -->
 <section class="s s--tint" id="llegar">
-  <div class="wrap">
-    <h2>Cómo llegar</h2>
-
-    <div class="cols">
-      <div class="col">
-        <p class="addr">Finca Villa María<br>
-        Ctra. de El Escorial, km 0,1<br>
-        28231 Las Rozas de Madrid</p>
-
-        <div class="acts">
-          <a class="btn btn--solid" href="https://maps.app.goo.gl/4qa2yJSJRJXVDLcHA" target="_blank" rel="noopener">Abrir en Google Maps</a>
-          <a class="btn btn--ghost" href="https://waze.com/ul?q=Finca%20Villa%20Mar%C3%ADa%20Las%20Rozas" target="_blank" rel="noopener">Abrir en Waze</a>
-        </div>
+  <div class="wrap sp">
+    <div class="sp__t">
+      <h2>Cómo llegar</h2>
+      <p class="addr">Finca Villa María<br>
+      Ctra. de El Escorial, km 0,1<br>
+      28231 Las Rozas de Madrid</p>
+      <div class="acts">
+        <a class="btn btn--solid" href="https://maps.app.goo.gl/4qa2yJSJRJXVDLcHA" target="_blank" rel="noopener">Google Maps</a>
+        <a class="btn btn--ghost" href="https://waze.com/ul?q=Finca%20Villa%20Mar%C3%ADa%20Las%20Rozas" target="_blank" rel="noopener">Waze</a>
       </div>
-
-      <div class="col">
-        <h3>Por carretera</h3>
-        <p>Desde Madrid por la A-6, <strong>salida 18</strong>, desvío El Escorial–Majadahonda.
-        La finca queda frente al Bus-VAO de Las Rozas.</p>
-        <p>Desde la M-50, <strong>salida 80</strong>.</p>
-
-        <h3>Aparcamiento</h3>
-        <p>Hay parking privado y vigilado dentro de la finca. Entrad y aparcad al fondo,
-        siguiendo el camino gris hasta el jardín.</p>
-
-        <p class="fine">¿Quieres verla antes? La finca tiene
-        <a href="https://fincavillamaria.com/360/Palacete/" target="_blank" rel="noopener">visita virtual del Palacete</a>.</p>
+    </div>
+    <div class="sp__b">
+      <div class="cards">
+        <div class="card">
+          <h3>Por carretera</h3>
+          <p>Desde Madrid por la A-6, <strong>salida 18</strong>, desvío El Escorial–Majadahonda.
+          La finca queda frente al Bus-VAO de Las Rozas.</p>
+          <p>Desde la M-50, <strong>salida 80</strong>.</p>
+        </div>
+        <div class="card">
+          <h3>Aparcamiento</h3>
+          <p>Hay parking privado y vigilado dentro de la finca. Entrad y aparcad al fondo,
+          siguiendo el camino gris hasta el jardín.</p>
+        </div>
+        <div class="card card--wide">
+          <h3>Antes de venir</h3>
+          <p>Si quieres hacerte una idea del sitio, la finca tiene
+          <a href="https://fincavillamaria.com/360/Palacete/" target="_blank" rel="noopener">visita virtual del Palacete</a>:
+          los jardines, el pabellón acristalado y las antiguas cocheras donde será la fiesta.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -187,103 +227,105 @@
 
 <!-- ══════════ SI VIENES DE FUERA ══════════ -->
 <section class="s" id="fuera">
-  <div class="wrap wrap--narrow">
-    <h2>Si vienes de fuera</h2>
-    <p class="lead">Al ser viernes, mucha gente aprovecha para venir el jueves y volver el domingo.
-    Si es tu caso, esto te puede ahorrar tiempo.</p>
+  <div class="wrap sp">
+    <div class="sp__t">
+      <h2>Si vienes<br>de fuera</h2>
+      <p class="sp__note">Al ser viernes, mucha gente aprovecha para venir el jueves y volver el
+      domingo. Si es tu caso, esto te puede ahorrar tiempo.</p>
+    </div>
+    <div class="sp__b">
+      <details class="acc">
+        <summary>Llegar a Madrid</summary>
+        <div class="acc__b">
+          <p><strong>En avión.</strong> Aeropuerto Adolfo Suárez Madrid-Barajas. Desde allí, a Las Rozas
+          hay unos 40 minutos en coche por la M-40 y la A-6.</p>
+          <p><strong>En tren.</strong> Estaciones de Chamartín o Atocha. Cercanías C-8 y C-10 llegan a
+          Las Rozas y El Pinar, y desde allí un taxi corto hasta la finca.</p>
+          <p><strong>En coche.</strong> Salida 18 de la A-6, dirección El Escorial–Majadahonda.</p>
+        </div>
+      </details>
 
-    <details class="acc">
-      <summary>Llegar a Madrid</summary>
-      <div class="acc__b">
-        <p><strong>En avión.</strong> Aeropuerto Adolfo Suárez Madrid-Barajas. Desde allí, a Las Rozas
-        hay unos 40 minutos en coche por la M-40 y la A-6.</p>
-        <p><strong>En tren.</strong> Estaciones de Chamartín o Atocha. Cercanías C-8 y C-10 llegan a
-        Las Rozas y El Pinar, y desde allí un taxi corto hasta la finca.</p>
-        <p><strong>En coche.</strong> Salida 18 de la A-6, dirección El Escorial–Majadahonda.</p>
-      </div>
-    </details>
+      <details class="acc">
+        <summary>Dónde dormir</summary>
+        <div class="acc__b">
+          <!-- TODO: pendiente de la lista de hoteles de la finca. Sustituir este bloque. -->
+          <p>Estamos cerrando con la finca una lista de hoteles cercanos y, si conseguimos tarifa
+          acordada, la publicaremos aquí con el código de reserva.</p>
+          <p>Mientras tanto, las zonas más cómodas son Las Rozas centro y Majadahonda, ambas a menos de
+          diez minutos en coche. Escríbenos y te orientamos.</p>
+        </div>
+      </details>
 
-    <details class="acc">
-      <summary>Dónde dormir</summary>
-      <div class="acc__b">
-        <!-- TODO: pendiente de la lista de hoteles de la finca. Sustituir este bloque. -->
-        <p>Estamos cerrando con la finca una lista de hoteles cercanos y, si conseguimos tarifa
-        acordada, la publicaremos aquí con el código de reserva.</p>
-        <p>Mientras tanto, las zonas más cómodas son Las Rozas centro y Majadahonda, ambas a menos de
-        diez minutos en coche. Escríbenos y te orientamos.</p>
-      </div>
-    </details>
-
-    <details class="acc">
-      <summary>Qué hacer el fin de semana</summary>
-      <div class="acc__b">
-        <p>La sierra queda a un paso: El Escorial y su monasterio están a veinte minutos, y Cercedilla
-        o Navacerrada a menos de una hora si te apetece andar.</p>
-        <p>Y el centro de Madrid está a media hora larga en coche o en Cercanías.</p>
-      </div>
-    </details>
+      <details class="acc">
+        <summary>Qué hacer el fin de semana</summary>
+        <div class="acc__b">
+          <p>La sierra queda a un paso: El Escorial y su monasterio están a veinte minutos, y Cercedilla
+          o Navacerrada a menos de una hora si te apetece andar.</p>
+          <p>Y el centro de Madrid está a media hora larga en coche o en Cercanías.</p>
+        </div>
+      </details>
+    </div>
   </div>
 </section>
 
 <!-- ══════════ VOLVER A CASA ══════════ -->
 <section class="s s--dark" id="volver">
-  <div class="wrap wrap--narrow">
-    <h2>Volver a casa</h2>
-    <p class="lead">La fiesta termina sobre las tres de la madrugada y a esa hora conviene tener el
-    regreso pensado. La finca está junto a la A-6, así que hay cobertura de coches, pero a esa hora
-    todos pediremos a la vez.</p>
-
-    <div class="tips">
-      <p>Pide el coche con quince o veinte minutos de antelación.</p>
-      <p>Agrupaos por zonas de Madrid: sale mejor y hay menos espera.</p>
-      <p>Si conduces, hay refrescos y agua toda la noche en la barra.</p>
+  <div class="wrap sp">
+    <div class="sp__t">
+      <h2>Volver a casa</h2>
+      <p class="sp__note">La fiesta termina sobre las tres de la madrugada. La finca está junto a la
+      A-6, así que hay cobertura de coches, pero a esa hora todos pediremos a la vez.</p>
     </div>
-
-    <div class="acts acts--wrap">
-      <a class="btn btn--solid" href="https://m.uber.com/ul/?action=setPickup&pickup=my_location" target="_blank" rel="noopener">Uber</a>
-      <a class="btn btn--solid" href="https://cabify.com/es" target="_blank" rel="noopener">Cabify</a>
-      <a class="btn btn--solid" href="https://bolt.eu/es-es/" target="_blank" rel="noopener">Bolt</a>
-      <!-- TODO: sustituir por el radiotaxi que trabaja con la finca cuando Paz lo facilite -->
-      <a class="btn btn--ghost" href="tel:+34916360000">Radiotaxi Las Rozas</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ QUÉ PONERSE ══════════ -->
-<section class="s" id="vestimenta">
-  <div class="wrap wrap--narrow">
-    <h2>Qué ponerse</h2>
-    <div class="prose">
-      <p>Etiqueta formal, sin más reglas. <!-- TODO: ajustad si queréis otro código -->
-      Ven cómodo, que la noche es larga.</p>
-      <p>Dos avisos prácticos: la ceremonia es en el jardín, sobre césped, así que el tacón fino lo va a
-      pasar mal. Y aunque sea finales de abril, en Las Rozas refresca al caer la noche: una chaqueta
-      o un chal se agradecen.</p>
+    <div class="sp__b">
+      <div class="tips">
+        <p>Pide el coche con quince o veinte minutos de antelación.</p>
+        <p>Agrupaos por zonas de Madrid: sale mejor y hay menos espera.</p>
+        <p>Si conduces, hay refrescos y agua toda la noche en la barra.</p>
+      </div>
+      <div class="acts acts--wrap">
+        <a class="btn btn--solid" href="https://m.uber.com/ul/?action=setPickup&pickup=my_location" target="_blank" rel="noopener">Uber</a>
+        <a class="btn btn--solid" href="https://cabify.com/es" target="_blank" rel="noopener">Cabify</a>
+        <a class="btn btn--solid" href="https://bolt.eu/es-es/" target="_blank" rel="noopener">Bolt</a>
+        <!-- TODO: sustituir por el radiotaxi que trabaja con la finca cuando Paz lo facilite -->
+        <a class="btn btn--ghost" href="tel:+34916360000">Radiotaxi Las Rozas</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════ REGALO ══════════ -->
-<section class="s s--tint" id="regalo">
-  <div class="wrap wrap--narrow">
-    <h2>Si quieres tener un detalle</h2>
-    <div class="prose">
-      <p>Lo que de verdad nos importa es que vengas. Pero si además te apetece regalarnos algo,
-      te dejamos aquí el número de cuenta.</p>
+<!-- ══════════ QUÉ PONERSE Y REGALO ══════════ -->
+<section class="s s--tint" id="detalles">
+  <div class="wrap duo">
+    <div class="duo__c" id="vestimenta">
+      <h2>Qué ponerse</h2>
+      <div class="prose">
+        <p>Etiqueta formal, sin más reglas. <!-- TODO: ajustad si queréis otro código -->
+        Ven cómodo, que la noche es larga.</p>
+        <p>La ceremonia es en el jardín, sobre césped, así que el tacón fino lo va a pasar mal.
+        Y aunque sea finales de abril, en Las Rozas refresca al caer la noche: una chaqueta o un
+        chal se agradecen.</p>
+      </div>
     </div>
 
-    <div class="iban">
-      <!-- TODO: sustituir por vuestro IBAN real -->
-      <code id="iban-txt">ES00 0000 0000 0000 0000 0000</code>
-      <button class="btn btn--solid" type="button" id="iban-btn" data-copy="ES00 0000 0000 0000 0000 0000">Copiar número de cuenta</button>
-      <span class="iban__ok" id="iban-ok" role="status" hidden>Copiado</span>
+    <div class="duo__c" id="regalo">
+      <h2>Si quieres tener un detalle</h2>
+      <div class="prose">
+        <p>Lo que de verdad nos importa es que vengas. Pero si además te apetece regalarnos algo,
+        te dejamos aquí el número de cuenta.</p>
+      </div>
+      <div class="iban">
+        <!-- TODO: sustituir por vuestro IBAN real -->
+        <code id="iban-txt">ES00 0000 0000 0000 0000 0000</code>
+        <button class="btn btn--solid" type="button" id="iban-btn" data-copy="ES00 0000 0000 0000 0000 0000">Copiar número de cuenta</button>
+        <span class="iban__ok" id="iban-ok" role="status" hidden>Copiado</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ══════════ CONFIRMAR ══════════ -->
 <section class="s s--call" id="confirmar">
-  <div class="wrap wrap--narrow">
+  <div class="wrap wrap--narrow center">
     <h2>Confirma tu asistencia</h2>
     <p class="lead">Nos ayuda muchísimo saberlo con tiempo: la finca nos pide los números y las
     alergias por escrito. Cuéntanos también si vienes con niños o si necesitas hotel.</p>
@@ -302,62 +344,66 @@
 
 <!-- ══════════ PREGUNTAS ══════════ -->
 <section class="s" id="faq">
-  <div class="wrap wrap--narrow">
-    <h2>Preguntas que nos habéis hecho</h2>
+  <div class="wrap sp">
+    <div class="sp__t">
+      <h2>Preguntas que<br>nos habéis hecho</h2>
+      <p class="sp__note">Si falta alguna, escríbenos y la añadimos.</p>
+    </div>
+    <div class="sp__b">
+      <details class="acc">
+        <summary>¿Se puede tirar arroz a la salida?</summary>
+        <div class="acc__b"><p>Arroz, confeti y legumbres no están permitidos en la finca, y la pirotecnia
+        está prohibida por normativa de la Comunidad de Madrid. Pétalos naturales sí, y los habrá
+        preparados allí mismo, así que no hace falta que traigas nada.</p></div>
+      </details>
 
-    <details class="acc">
-      <summary>¿Se puede tirar arroz a la salida?</summary>
-      <div class="acc__b"><p>Arroz, confeti y legumbres no están permitidos en la finca, y la pirotecnia
-      está prohibida por normativa de la Comunidad de Madrid. Pétalos naturales sí, y los habrá
-      preparados allí mismo, así que no hace falta que traigas nada.</p></div>
-    </details>
+      <details class="acc">
+        <summary>¿Hay sitio para aparcar?</summary>
+        <div class="acc__b"><p>Sí, parking privado y vigilado dentro de la finca. Aparca al fondo,
+        siguiendo el camino gris.</p></div>
+      </details>
 
-    <details class="acc">
-      <summary>¿Hay sitio para aparcar?</summary>
-      <div class="acc__b"><p>Sí, parking privado y vigilado dentro de la finca. Aparca al fondo,
-      siguiendo el camino gris.</p></div>
-    </details>
+      <details class="acc">
+        <summary>Vengo con niños, ¿hay algo para ellos?</summary>
+        <div class="acc__b"><p>Sí, hay menú infantil. Dinos cuántos vienen y sus edades en el formulario
+        para que la cocina lo tenga en cuenta.</p></div>
+      </details>
 
-    <details class="acc">
-      <summary>Vengo con niños, ¿hay algo para ellos?</summary>
-      <div class="acc__b"><p>Sí, hay menú infantil. Dinos cuántos vienen y sus edades en el formulario
-      para que la cocina lo tenga en cuenta.</p></div>
-    </details>
+      <details class="acc">
+        <summary>Soy celíaco, vegetariano o tengo alergias</summary>
+        <div class="acc__b"><p>La cocina de la finca prepara menús adaptados sin problema. Solo necesitamos
+        que lo indiques en el formulario, cuanto antes mejor.</p></div>
+      </details>
 
-    <details class="acc">
-      <summary>Soy celíaco / vegetariano / tengo alergias</summary>
-      <div class="acc__b"><p>La cocina de la finca prepara menús adaptados sin problema. Solo necesitamos
-      que lo indiques en el formulario, cuanto antes mejor.</p></div>
-    </details>
+      <details class="acc">
+        <summary>¿A qué hora termina?</summary>
+        <div class="acc__b"><p>Sobre las tres de la madrugada. Son cuatro horas de barra libre y al ser
+        viernes no se puede alargar más, así que aprovecha.</p></div>
+      </details>
 
-    <details class="acc">
-      <summary>¿A qué hora termina?</summary>
-      <div class="acc__b"><p>Sobre las tres de la madrugada. Son cuatro horas de barra libre y al ser
-      viernes no se puede alargar más, así que aprovecha.</p></div>
-    </details>
+      <details class="acc">
+        <summary>¿Se puede fumar?</summary>
+        <div class="acc__b"><p>En los espacios cerrados no. En los jardines y las zonas exteriores, sí.</p></div>
+      </details>
 
-    <details class="acc">
-      <summary>¿Se puede fumar?</summary>
-      <div class="acc__b"><p>En los espacios cerrados no. En los jardines y las zonas exteriores, sí.</p></div>
-    </details>
+      <details class="acc">
+        <summary>¿Cómo vuelvo a Madrid?</summary>
+        <div class="acc__b"><p>Con Uber, Cabify, Bolt o taxi. Tienes los enlaces en el apartado
+        <a href="#volver">Volver a casa</a>.</p></div>
+      </details>
 
-    <details class="acc">
-      <summary>¿Cómo vuelvo a Madrid?</summary>
-      <div class="acc__b"><p>Con Uber, Cabify, Bolt o taxi. Tienes los enlaces en el apartado
-      <a href="#volver">Volver a casa</a>.</p></div>
-    </details>
-
-    <details class="acc">
-      <summary>¿Puedo hacer fotos?</summary>
-      <div class="acc__b"><p>Todas las que quieras. Solo te pedimos que durante la ceremonia dejes el
-      pasillo libre al fotógrafo. Habrá fotomatón durante la fiesta.</p></div>
-    </details>
+      <details class="acc">
+        <summary>¿Puedo hacer fotos?</summary>
+        <div class="acc__b"><p>Todas las que quieras. Solo te pedimos que durante la ceremonia dejes el
+        pasillo libre al fotógrafo. Habrá fotomatón durante la fiesta.</p></div>
+      </details>
+    </div>
   </div>
 </section>
 
 <!-- ══════════ DESPUÉS ══════════ -->
 <section class="s s--tint" id="despues">
-  <div class="wrap wrap--narrow">
+  <div class="wrap wrap--narrow center">
     <h2>Después de la boda</h2>
     <div class="prose">
       <p>Aquí colgaremos la galería de fotos cuando esté lista, y un sitio donde puedas subir las tuyas.
