@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//alvaroyrocio2027//Boda//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:boda-alvaro-rocio-20270430@alvaroyrocio2027.es
+DTSTAMP:20260905T120000Z
+DTSTART;TZID=Europe/Madrid:20270430T173000
+DTEND;TZID=Europe/Madrid:20270501T030000
+SUMMARY:Boda de Álvaro y Rocío
+DESCRIPTION:Nos casamos. Toda la información en https://www.alvaroyrocio2027.es
+LOCATION:Finca Villa María\, Ctra. de El Escorial km 0\,1\, 28231 Las Rozas de Madrid
+URL:https://www.alvaroyrocio2027.es
+GEO:40.4858925;-3.8645374
+BEGIN:VALARM
+TRIGGER:-P7D
+ACTION:DISPLAY
+DESCRIPTION:La boda de Álvaro y Rocío es dentro de una semana
+END:VALARM
+END:VEVENT
+END:VCALENDAR
