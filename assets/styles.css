@@ -155,12 +155,21 @@ p:last-child{margin-bottom:0}
   }
   .telon__capa--a{background-image:url("img/fondo-1-m.jpg")}
   .telon__capa--b{background-image:url("img/fondo-2-m.jpg")}
+  /* La foto mide 96vw de alto (820x786): el velo la deja limpia y cierra debajo */
   .telon__velo{background:linear-gradient(180deg,
-    rgba(245,241,232,.44) 0%,
-    rgba(245,241,232,.28) 26%,
-    rgba(245,241,232,.60) 44%,
-    rgba(245,241,232,.97) 56%,
-    rgba(245,241,232,1) 68%)}
+    rgba(245,241,232,.14) 0,
+    rgba(245,241,232,.10) 58vw,
+    rgba(245,241,232,.52) 82vw,
+    rgba(245,241,232,.98) 96vw,
+    rgba(245,241,232,1) 104vw)}
+}
+
+@media (max-width:820px){
+  /* El texto de portada arranca debajo de la foto, no encima de las caras */
+  .hero{padding-top:calc(96vw - var(--nav-h) + 1.4rem)}
+  .hero__over{margin-bottom:.4rem}
+  .cd{margin-top:1.5rem}
+  .hero__acts{margin-top:1.7rem}
 }
 
 /* Todo lo que viene después del tramo con foto va sobre color liso */
@@ -283,7 +292,7 @@ p:last-child{margin-bottom:0}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:2.2rem}
 .gal__it{margin:0;overflow:hidden;background:var(--salvia);aspect-ratio:4/5}
 .gal__it img{width:100%;height:100%;object-fit:cover;filter:var(--tono);display:block;transform:scale(1.02)}
-@media (max-width:520px){.gal{grid-template-columns:1fr 1fr;gap:10px}}
+@media (max-width:520px){.gal{grid-template-columns:repeat(3,1fr);gap:8px}}
 
 /* ─────────── Línea de tiempo ─────────── */
 
