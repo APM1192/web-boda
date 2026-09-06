@@ -148,8 +148,9 @@ p:last-child{margin-bottom:0}
 }
 
 @media (max-width:820px){
-  .telon__capa--a{background-image:url("img/fondo-1-m.jpg")}
-  .telon__capa--b{background-image:url("img/fondo-2-m.jpg")}
+  .telon__capa{background-size:142% auto;background-repeat:no-repeat}
+  .telon__capa--a{background-position:38% 60%}
+  .telon__capa--b{background-position:56% 26%}
   .telon__velo{background:linear-gradient(180deg, rgba(245,241,232,.93) 0%, rgba(245,241,232,.82) 38%, rgba(245,241,232,.5) 64%, rgba(245,241,232,.36) 100%)}
 }
 
@@ -271,9 +272,9 @@ p:last-child{margin-bottom:0}
 /* ─────────── Galería ─────────── */
 
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:2.2rem}
-.gal__it{margin:0;overflow:hidden;background:var(--salvia)}
-.gal__it img{width:100%;aspect-ratio:4/5;object-fit:cover;filter:var(--tono)}
-@media (max-width:520px){.gal{grid-template-columns:1fr 1fr}.gal__it:last-child{display:none}}
+.gal__it{margin:0;overflow:hidden;background:var(--salvia);aspect-ratio:4/5}
+.gal__it img{width:100%;height:100%;object-fit:cover;filter:var(--tono);display:block}
+@media (max-width:520px){.gal{grid-template-columns:1fr 1fr;gap:10px}}
 
 /* ─────────── Línea de tiempo ─────────── */
 
