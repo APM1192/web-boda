@@ -105,7 +105,7 @@ p:last-child{margin-bottom:0}
 
 /* ─────────── Botones ─────────── */
 
-.btn{display:inline-block;font-family:var(--sans);font-size:.95rem;font-weight:500;line-height:1.35;padding:.72rem 1.5rem;border-radius:2px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease}
+.btn{display:inline-block;font-family:var(--sans);font-size:.95rem;font-weight:500;line-height:1.35;padding:.72rem 1.5rem;border-radius:999px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color .18s ease,color .18s ease,border-color .18s ease}
 .btn--solid{background:var(--barro);color:#fff;border-color:var(--barro)}
 .btn--solid:hover{background:var(--barro-hondo);border-color:var(--barro-hondo);color:#fff}
 .btn--ghost{background:transparent;color:var(--tinta);border-color:rgba(46,58,47,.3)}
