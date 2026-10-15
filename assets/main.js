@@ -6,11 +6,9 @@
 (function () {
   'use strict';
 
-  /* ── 1. Cuenta atrás ───────────────────────────
-     TODO: ajustar la hora cuando la finca confirme
-     el horario definitivo de la ceremonia.        */
+  /* ── 1. Cuenta atrás ─────────────────────────── */
 
-  var BODA = new Date('2027-04-30T18:00:00+02:00');
+  var BODA = new Date('2027-04-30T18:30:00+02:00');
 
   var caja = document.getElementById('cuenta');
   var eD = document.getElementById('cd-d');
