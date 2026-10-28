@@ -392,3 +392,34 @@ p:last-child{margin-bottom:0}
 @media (max-width:820px){
   .hero__logo{margin-bottom:.9rem}
 }
+
+/* ═══════ Portada: fecha con siluetas, contador legible ═══════ */
+
+.hero__fecha{display:flex;align-items:center;justify-content:center;gap:.8rem}
+.hero__isla{width:auto;height:1.5em;flex:none;filter:drop-shadow(0 1px 8px rgba(245,241,232,.8))}
+
+.hero__over{margin:1.4rem 0 0}
+
+/* El contador cae sobre el mar: necesita soporte propio, como la señal de bajar */
+.cd__g{
+  display:inline-flex;
+  background:rgba(245,241,232,.82);
+  backdrop-filter:blur(6px);
+  border:1px solid rgba(124,139,106,.28);
+  border-radius:999px;
+  padding:.6rem 1.3rem .55rem;
+}
+.cd__n{color:var(--tinta);text-shadow:none}
+.cd__l{color:var(--tinta-suave)}
+
+.codigo{
+  font-family:var(--sans);letter-spacing:.08em;
+  background:var(--papel);border:1px dashed var(--olivo);
+  padding:.05rem .45rem;border-radius:4px;white-space:nowrap;
+}
+
+@media (max-width:520px){
+  .hero__fecha{gap:.55rem}
+  .hero__isla{height:1.25em}
+  .cd__g{padding:.5rem .9rem .45rem}
+}
