@@ -423,3 +423,27 @@ p:last-child{margin-bottom:0}
   .hero__isla{height:1.25em}
   .cd__g{padding:.5rem .9rem .45rem}
 }
+
+/* ═══════ Portada: legibilidad de "Save the date" y del botón secundario ═══════ */
+
+.hero__over{
+  color:var(--tinta);
+  font-weight:400;
+  font-size:clamp(1.15rem,2.6vw,1.4rem);
+  text-shadow:
+    0 0 6px rgba(245,241,232,1),
+    0 0 14px rgba(245,241,232,.95),
+    0 0 28px rgba(245,241,232,.85);
+}
+
+/* Sobre la foto, el botón fantasma necesita un fondo propio: mismo cristal que el contador */
+.hero .btn--ghost{
+  background:rgba(245,241,232,.82);
+  backdrop-filter:blur(6px);
+  border-color:rgba(124,139,106,.45);
+  color:var(--tinta);
+}
+.hero .btn--ghost:hover{
+  background:rgba(245,241,232,.95);
+  border-color:var(--olivo-hondo);
+}
